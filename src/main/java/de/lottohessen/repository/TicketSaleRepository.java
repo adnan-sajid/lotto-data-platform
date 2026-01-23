@@ -9,11 +9,9 @@ import java.sql.SQLException;
 public class TicketSaleRepository {
 
     public void save(TicketSale sale) throws SQLException {
-        String sql = """
-            INSERT INTO TICKET_SALE
-            (sale_id, draw_id, retailer_id, ticket_price, sale_timestamp)
-            VALUES (?, ?, ?, ?, ?)
-        """;
+        String sql = " INSERT INTO TICKET_SALE" +
+            "(sale_id, draw_id, retailer_id, ticket_price, sale_timestamp)" +
+            "VALUES (?, ?, ?, ?, ?)";
 
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
