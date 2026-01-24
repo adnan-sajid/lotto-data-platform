@@ -1,4 +1,4 @@
-package de.lottohessen.model;
+package de.lotto.model;
 
 public class Retailer {
 
